@@ -12,8 +12,7 @@ import util.Utilities;
 public class AssignmentThreeMain {
 
   /**
-   * @param Program
-   *          Main for Assignment 3.
+   * @param Program Main for Assignment 3.
    */
 
   public static void main(String[] args) {
@@ -39,14 +38,14 @@ public class AssignmentThreeMain {
     
     TestScores scores = new TestScores(testScore1, testScore2, testScore3);
     
+    /*for(int i = 0; i < 3; ++i){
+    System.out.println("Enter score");
+    scores.addScore(GetNextDouble(inputScanner));
+    }*/
+    
     System.out.println("Average Test Score is: " +  df.format(scores.getAverage()));
     System.out.println("Letter Grade is: " + scores.getAverageGrade());
     
-        
-    /*for(int i = 0; i < 3; ++i){
-      System.out.println("Enter score");
-      scores.addScore(GetNextDouble(inputScanner));
-    }*/
   }
 
   public static void programTwo() throws SoundMediumNotFoundException,
