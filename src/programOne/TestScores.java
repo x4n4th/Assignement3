@@ -31,10 +31,12 @@ public class TestScores {
 
   public String getAverageGrade() {
     int average = (int) (getAverage() / 10);
+    
+    if(average >= 10){
+      return "A";
+    }
 
     switch (average) {
-    case 10:
-      return "A";
     case 9:
       return "A";
     case 8:
