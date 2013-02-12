@@ -3,6 +3,7 @@ package main;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
+import programOne.TestScores;
 import programTwo.SoundMedium;
 import programTwo.SoundMediumNotFoundException;
 import Util.DoubleMismatchException;
@@ -18,12 +19,34 @@ public class AssignmentThreeMain {
   public static void main(String[] args) {
     while (true) {
       try {
+        programOne();
         programTwo();
         break;
       } catch (SoundMediumNotFoundException | DoubleMismatchException e) {
         System.out.println("Please Try Again");
       }
     }
+  }
+  
+  public static void programOne() throws DoubleMismatchException{
+    Scanner ks = new Scanner(System.in);
+    DecimalFormat df = new DecimalFormat("#0.00");
+    
+    System.out.println("Enter Three Test Scores");
+    double testScore1 = Utilities.getNextDouble(ks);
+    double testScore2 = Utilities.getNextDouble(ks);
+    double testScore3 = Utilities.getNextDouble(ks);
+    
+    TestScores scores = new TestScores(testScore1, testScore2, testScore3);
+    
+    System.out.println("Average Test Score is: " +  df.format(scores.getAverage()));
+    System.out.println("Letter Grade is: " + scores.getAverageGrade());
+    
+        
+    /*for(int i = 0; i < 3; ++i){
+      System.out.println("Enter score");
+      scores.addScore(GetNextDouble(inputScanner));
+    }*/
   }
 
   public static void programTwo() throws SoundMediumNotFoundException,
