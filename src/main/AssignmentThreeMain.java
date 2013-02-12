@@ -6,8 +6,8 @@ import java.util.Scanner;
 import programOne.TestScores;
 import programTwo.SoundMedium;
 import programTwo.SoundMediumNotFoundException;
-import Util.DoubleMismatchException;
-import Util.Utilities;
+import util.DoubleMismatchException;
+import util.Utilities;
 
 public class AssignmentThreeMain {
 
